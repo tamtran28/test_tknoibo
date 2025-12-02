@@ -4,10 +4,10 @@ from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.llms.groq import Groq
 from llama_index.embeddings.openai import OpenAIEmbedding
 
-st.set_page_config(page_title="RAG Chatbot", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="Chatbot", page_icon="🤖", layout="wide")
 
 # UI
-st.title("🤖 RAG Chatbot - PDF - Miễn phí - Streamlit Cloud")
+st.title("🤖 Chatbot - PDF")
 st.sidebar.header("📄 Upload PDF")
 
 uploaded_files = st.sidebar.file_uploader(
@@ -75,4 +75,4 @@ if user_input:
     else:
         st.session_state.messages.append(("assistant", "❗ Hãy upload PDF trước!"))
 
-    st.experimental_rerun()
+    st.rerun()
